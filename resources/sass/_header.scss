@@ -1,0 +1,30 @@
+header {
+    height: 100px;
+    @include flex-between;
+    ul {
+      @include flex-center;
+      li {
+        display: inline-block;
+        height: 100%;
+        a {
+          display: inline-block;
+          padding: 0 10px;
+          line-height: 97px;
+          font-size: 12px;
+          font-weight: bold;
+          text-transform: uppercase;
+          border-bottom: 3px solid transparent;
+          &:hover,
+          &.active {
+            color: $primary-color;
+            border-bottom: 3px solid $primary-color;
+          }
+        }
+      }
+    }
+    figure {
+      width: 80px;
+    }
+  }
+  
+  

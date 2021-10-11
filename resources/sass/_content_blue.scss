@@ -1,0 +1,25 @@
+#contents-blue {
+    background-color: $primary-color;
+    height: 120px;
+    ul.row {
+      @include flex-between;
+      margin: 0 20px;
+      li.col {
+        display: inline-block;
+        color: white;
+        a {
+          @include flex-center;
+          color: white;
+          img {
+            height: 40px;
+            margin-right: 10px;
+          }
+          span {
+            text-transform: uppercase;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+  

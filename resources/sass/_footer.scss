@@ -1,0 +1,73 @@
+// footer top
+
+#footer-top {
+    height: 300px;
+    background-image: url("../images/footer-bg.jpg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    .row {
+      color: white;
+      display: flex;
+      justify-content: space-between;
+        .footer-left {
+          display: flex;
+          margin-top: 30px;
+            .col {
+              margin-right: 40px;
+            }
+            h5 {
+                text-transform: uppercase;
+                margin-bottom: 10px;
+            }
+            h5.shop {
+                margin-top: 15px;
+            }
+            a {
+                font-size: 10px;
+            }
+        }
+        .footer-right {
+            align-self: center;
+            img {
+              height: 450px;
+            }
+        }
+    }
+}
+
+// footer bottom
+
+#footer-bottom {
+    background-color: rgb(48, 48, 48);
+    height: 100px;
+    .row {
+      @include flex-between;
+      .button a {
+        text-decoration: none;
+        color: white;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: bold;
+        padding: 12px;
+        border: 2px solid $primary-color;
+      }
+      .social {
+        @include flex-between;
+        flex-basis: 350px;
+        h4 {
+          text-transform: uppercase;
+          color: $primary-color;
+        }
+        a {
+          display: inline-block;
+        }
+      }
+    }
+  }
+  
+  
+  
+  
+  

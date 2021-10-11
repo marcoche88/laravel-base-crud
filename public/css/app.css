@@ -1,0 +1,334 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+li {
+  list-style-type: none;
+}
+li a {
+  text-decoration: none;
+  color: #8a8a8a;
+}
+
+h1 {
+  margin: 50px 0;
+  text-align: center;
+  color: #0282F9;
+}
+
+header {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header ul li {
+  display: inline-block;
+  height: 100%;
+}
+header ul li a {
+  display: inline-block;
+  padding: 0 10px;
+  line-height: 97px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-bottom: 3px solid transparent;
+}
+header ul li a:hover, header ul li a.active {
+  color: #0282F9;
+  border-bottom: 3px solid #0282F9;
+}
+header figure {
+  width: 80px;
+}
+
+#footer-top {
+  height: 300px;
+  background-image: url("../images/footer-bg.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+#footer-top .row {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+#footer-top .row .footer-left {
+  display: flex;
+  margin-top: 30px;
+}
+#footer-top .row .footer-left .col {
+  margin-right: 40px;
+}
+#footer-top .row .footer-left h5 {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+#footer-top .row .footer-left h5.shop {
+  margin-top: 15px;
+}
+#footer-top .row .footer-left a {
+  font-size: 10px;
+}
+#footer-top .row .footer-right {
+  align-self: center;
+}
+#footer-top .row .footer-right img {
+  height: 450px;
+}
+
+#footer-bottom {
+  background-color: #303030;
+  height: 100px;
+}
+#footer-bottom .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#footer-bottom .row .button a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px;
+  border: 2px solid #0282F9;
+}
+#footer-bottom .row .social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-basis: 350px;
+}
+#footer-bottom .row .social h4 {
+  text-transform: uppercase;
+  color: #0282F9;
+}
+#footer-bottom .row .social a {
+  display: inline-block;
+}
+
+.jumbotron {
+  height: 300px;
+  background-image: url("../images/jumbotron.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#contents-blue {
+  background-color: #0282F9;
+  height: 120px;
+}
+#contents-blue ul.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 20px;
+}
+#contents-blue ul.row li.col {
+  display: inline-block;
+  color: white;
+}
+#contents-blue ul.row li.col a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+#contents-blue ul.row li.col a img {
+  height: 40px;
+  margin-right: 10px;
+}
+#contents-blue ul.row li.col a span {
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+#contents {
+  background-color: #1c1c1c;
+  color: white;
+}
+#contents .series-contents {
+  position: relative;
+}
+#contents .title {
+  background-color: #0282F9;
+  padding: 10px 30px;
+  font-size: 22px;
+  text-transform: uppercase;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  top: -20px;
+}
+#contents .series {
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#contents .load-more {
+  text-align: center;
+  padding: 25px;
+}
+#contents .load-more .button-load {
+  display: inline-block;
+  padding: 10px 50px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+  background-color: #0282F9;
+}
+#contents .card {
+  flex-basis: 200px;
+  padding-bottom: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#contents .card img {
+  width: 100%;
+  height: 180px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+}
+#contents .card figcaption {
+  margin-top: 20px;
+  text-transform: uppercase;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+#comic .cover {
+  background-color: #0282F9;
+  height: 70px;
+  position: relative;
+}
+#comic .cover img {
+  border: 1px solid white;
+  height: 200px;
+  position: absolute;
+  bottom: 15px;
+}
+#comic .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#comic .row .description, #comic .row .adv {
+  padding: 20px;
+}
+#comic .row .description {
+  flex-basis: 70%;
+}
+#comic .row .adv {
+  flex-basis: 30%;
+}
+#comic .row h1 {
+  text-transform: uppercase;
+  color: #153f5b;
+  margin: 20px 0;
+}
+#comic .row .price {
+  display: flex;
+  background-color: #70b764;
+  color: white;
+  font-size: 12px;
+}
+#comic .row .price .price-left {
+  flex-basis: 75%;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  color: #abec9a;
+}
+#comic .row .price .price-left span {
+  color: white;
+}
+#comic .row .price .price-right {
+  border-left: 1px solid #558d4d;
+  flex-basis: 25%;
+  padding: 12px;
+}
+#comic .row .text {
+  color: #666;
+  padding: 15px 0;
+  font-size: 12px;
+  line-height: 20px;
+}
+#comic .info-box {
+  background-color: #f6f6f6;
+  padding-bottom: 80px;
+}
+#comic .info-box .info {
+  display: flex;
+  justify-content: center;
+}
+#comic .info-box .info .talent, #comic .info-box .info .specs {
+  flex-basis: 50%;
+  color: #153f5b;
+}
+#comic .info-box .info .talent {
+  padding-right: 20px;
+}
+#comic .info-box .info .specs {
+  padding-left: 20px;
+}
+#comic .info-box .info h3 {
+  padding: 20px 0;
+  border-bottom: 1px solid #eaeaea;
+}
+#comic .info-box .info .art, #comic .info-box .info .written, #comic .info-box .info .series, #comic .info-box .info .us-price, #comic .info-box .info .onsale-date {
+  display: flex;
+  border-bottom: 1px solid #eaeaea;
+  font-size: 12px;
+  padding: 10px 0;
+}
+#comic .info-box .info p {
+  flex-basis: 30%;
+}
+#comic .info-box .info .artists, #comic .info-box .info .writers, #comic .info-box .info .series-name, #comic .info-box .info .price-value {
+  flex-basis: 60%;
+  color: #83c5e4;
+}
+#comic .info-box .info .series-name {
+  text-transform: uppercase;
+}
+#comic .info-box .info .price-value, #comic .info-box .info .date {
+  color: #666;
+}
