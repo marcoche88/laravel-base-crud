@@ -22,22 +22,8 @@ Route::get('/characters', function () {
 })->name('characters');
 
 // COMICS
-Route::prefix('/comics')->name('comics.')->group(function () {
-    Route::get('/', function () {
-        $data = ['comics' => config('comics')];
-        return view('comics.index', $data);
-    })->name('index');
-    Route::get('/{id}', function ($id) {
-        $comics = config('comics');
-
-        // controllo se id non è valido
-        if (!is_numeric($id) && $id < 0 && $id >= count($comics)) {
-            abort('404');
-        }
-        $comic = $comics[$id];
-        return view('comics.show', compact('comic'));
-    })->name('show');
-});
+Route::get('/comics', 'ComicController@index')->name('comics.index');
+Route::get('/comics/{id}', 'ComicController@show')->name('comics.show');
 
 Route::get('/movies', function () {
     return view('movies');

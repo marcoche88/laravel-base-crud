@@ -59,47 +59,4 @@
         line-height: 20px;
         }
     }
-
-    // section info comic
-    .info-box {
-        background-color: rgb(246, 246, 246);
-        padding-bottom: 80px;
-        .info {
-            display: flex;
-            justify-content: center;
-            .talent, .specs {
-                flex-basis: 50%;
-                color: rgb(21, 63, 91);
-            }
-            .talent {
-                padding-right: 20px;
-            }
-            .specs {
-                padding-left: 20px;
-            }
-            h3 {
-                padding: 20px 0;
-                border-bottom: 1px solid rgb(234, 234, 234);
-            }
-            .art, .written, .series, .us-price, .onsale-date {
-                display: flex;
-                border-bottom: 1px solid rgb(234, 234, 234);
-                font-size: 12px;
-                padding: 10px 0;
-            }
-            p {
-                flex-basis: 30%;
-            }
-            .artists, .writers, .series-name, .price-value {
-                flex-basis: 60%;
-                color: rgb(131, 197, 228);
-            }
-            .series-name {
-                text-transform: uppercase;
-            }
-            .price-value, .date {
-                color: #666;
-            }
-        }
-    }
 }
