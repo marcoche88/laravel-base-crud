@@ -27,6 +27,7 @@
                 {{ $comic->description }}
             </div>
             <div>
+                <a href="{{ route('comics.edit', $comic->id) }}" class="btn btn-success my-3">Modifica</a>
                 <a href="{{ url()->previous() }}" class="btn btn-warning">Indietro</a>
             </div>
         </div>
