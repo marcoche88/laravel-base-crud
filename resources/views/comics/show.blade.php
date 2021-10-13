@@ -26,6 +26,9 @@
             <div class="text">
                 {{ $comic->description }}
             </div>
+            <div>
+                <a href="{{ url()->previous() }}" class="btn btn-warning">Indietro</a>
+            </div>
         </div>
         <div class="col adv">
             <img src="{{ asset('images/adv.jpg') }}" alt="adv">
