@@ -9,7 +9,7 @@
         <div class="title">current series</div>
         <div class="series">
             @foreach ($comics as $comic)
-            <div class="card">
+            <div class="card-comics">
                 <a href="{{ route("comics.show", $comic->id) }}"><img src="{{ $comic->thumb }}" alt="{{ $comic->title }}" /></a>
                 <figcaption>{{ $comic->title }}</figcaption>
             </div>

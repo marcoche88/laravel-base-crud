@@ -6,9 +6,8 @@
     </figure>
     <nav class="h-100">
       <ul>
-        @foreach ($links as $link)
-            <li><a class="{{ request()->routeIs($link['route']) ? 'active' : '' }}" href="{{ route($link['route']) }}">{{ $link['text'] }}</a></li>
-        @endforeach
+          <li><a class="{{ request()->routeIs('comics.index') ? 'active' : '' }}" href="{{ route('comics.index') }}">Comics</a></li>
+          <li><a class="{{ request()->routeIs('comics.create') ? 'active' : '' }}" href="{{ route('comics.create') }}">Aggiungi comics</a></li>
       </ul>
     </nav>
   </header>

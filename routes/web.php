@@ -15,9 +15,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'HomeController@index')->name('home');
 
-Route::get('/characters', 'CharacterController@index')->name('characters');
-
-Route::get('/movies', 'MovieController@index')->name('movies');
-
 // COMICS
 Route::resource('comics', 'ComicController');

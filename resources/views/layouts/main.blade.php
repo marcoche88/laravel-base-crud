@@ -9,7 +9,7 @@
 </head>
 <body>
     {{-- header con i dati del config main_menu --}}
-    @include('includes.header', ['links' => config('main_menu')])
+    @include('includes.header')
 
     {{-- jumbotron --}}
     <section class="jumbotron"></section>
@@ -18,10 +18,7 @@
     <main>
         @yield('content')
     </main>
-
-    {{-- footer --}}
-    @include('includes.footer')
-
+    
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
