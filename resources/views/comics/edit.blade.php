@@ -3,7 +3,7 @@
 @section('title','Edit')
 
 @section('content')
-<div class="container">
+<div class="my-container">
 
     <h1>Modifica fumetto</h1>
     <form method="POST" action="{{ route('comics.update', $comic->id) }}">

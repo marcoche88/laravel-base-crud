@@ -3,7 +3,7 @@
 @section('title','Create')
 
 @section('content')
-<div class="container">
+<div class="my-container">
 
     <h1>Aggiungi nuovo fumetto</h1>
     <form method="POST" action="{{ route('comics.store') }}">
@@ -54,6 +54,7 @@
         </div>
         <div class="col-auto text-center my-4">
             <button type="submit" class="btn btn-primary">Aggiungi</button>
+            <a href="{{ url()->previous() }}" class="btn btn-warning">Indietro</a>
         </div>
     </form>
 </div>

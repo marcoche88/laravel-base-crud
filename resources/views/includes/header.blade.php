@@ -1,4 +1,4 @@
-<header class="container">
+<header class="my-container">
     <figure>
       <a href="{{ route('home') }}">
         <img src="{{ asset('images/dc-logo.png') }}" alt="logo" />

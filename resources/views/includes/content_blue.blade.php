@@ -1,5 +1,5 @@
 <section id="contents-blue">
-    <div class="container h-100">
+    <div class="my-container h-100">
         <ul class="row h-100">
             <li class="col"><a href="#"><img src="{{ asset('images/buy-comics-digital-comics.png') }}" alt="buy-comics-digital-comics" /><span>Digital Comics</span></a></li>
             <li class="col"><a href="#"><img src="{{ asset('images/buy-comics-merchandise.png') }}" alt="buy-comics-merchandise" /><span>DC Merchandise</span></a></li>

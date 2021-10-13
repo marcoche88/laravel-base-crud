@@ -7,13 +7,13 @@
 
     {{-- section blue with img --}}
     <div class="cover">
-        <figure class="container">
+        <figure class="my-container">
             <img src="{{ $comic->thumb }}" alt="{{ $comic->title }}">
         </figure>
     </div>
 
     {{-- section details comic with adv --}}
-    <div class="row container">
+    <div class="row my-container">
         <div class="col description">
             <h1>{{ $comic->title }}</h1>
             <div class="price">
@@ -28,7 +28,7 @@
             </div>
             <div>
                 <a href="{{ route('comics.edit', $comic->id) }}" class="btn btn-success my-3">Modifica</a>
-                <a href="{{ url()->previous() }}" class="btn btn-warning">Indietro</a>
+                <a href="{{ route('comics.index') }}" class="btn btn-warning">Indietro</a>
             </div>
         </div>
         <div class="col adv">

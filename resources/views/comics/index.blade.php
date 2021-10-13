@@ -5,7 +5,7 @@
 @section('content')
 {{-- cards section --}}
 <section id="contents">
-    <section class="series-contents container">
+    <section class="series-contents my-container">
         <div class="title">current series</div>
         <div class="series">
             @foreach ($comics as $comic)
