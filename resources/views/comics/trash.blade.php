@@ -11,7 +11,11 @@
             @foreach ($comics as $comic)
             <div class="card-comics">
                 <div class="d-flex justify-content-center my-3">
-                    {{-- bottone ripristina --}}
+                    <form action="{{ route('comics.restore', $comic->id) }}" method="POST">
+                        @csrf
+                        @method('PATCH')
+                        <button type="submit" class="btn btn-success">Ripristina</button>
+                    </form>
                 </div>
                 <img src="{{ $comic->thumb }}" alt="{{ $comic->title }}" />
                 <figcaption>{{ $comic->title }}</figcaption>

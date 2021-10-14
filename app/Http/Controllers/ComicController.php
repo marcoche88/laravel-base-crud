@@ -99,4 +99,11 @@ class ComicController extends Controller
         $comics = Comic::onlyTrashed()->get();
         return view('comics.trash', compact('comics'));
     }
+
+    public function restore($id)
+    {
+        $comic = Comic::withTrashed()->find($id);
+        $comic->restore();
+        return redirect()->route('comics.index');
+    }
 }
