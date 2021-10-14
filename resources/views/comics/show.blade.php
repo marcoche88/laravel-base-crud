@@ -29,7 +29,7 @@
             <div class="d-flex justify-content-end my-3">
                 <a href="{{ route('comics.edit', $comic->id) }}" class="btn btn-success me-3">Modifica</a>
                 <a href="{{ route('comics.index') }}" class="btn btn-warning me-3">Indietro</a>
-                <form action="{{ route('comics.destroy', $comic->id) }}" method="POST">
+                <form action="{{ route('comics.destroy', $comic->id) }}" method="POST" id="delete-form">
                     @csrf
                     @method('DELETE')
                     <button type="submit" class="btn btn-danger">Cancella</button>
@@ -41,5 +41,8 @@
         </div>
     </div>
 </section>
-    
+@endsection
+
+@section('scripts')
+    <script src="{{ asset('js/confirm_delete_show.js') }}"></script>
 @endsection
