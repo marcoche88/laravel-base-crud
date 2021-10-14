@@ -11387,6 +11387,8 @@ header figure {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 12px;
+  text-decoration: none;
+  color: white;
   background-color: #0282F9;
 }
 #contents .card-comics {

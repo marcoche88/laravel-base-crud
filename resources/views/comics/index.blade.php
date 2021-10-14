@@ -31,7 +31,7 @@
             @endforeach
         </div>
         <div class="load-more">
-            <div class="button-load pointer">load more</div>
+            <a class="button-load pointer" href="{{ route('comics.trash') }}">Cestino</a>
         </div>
     </section>
 </section>
