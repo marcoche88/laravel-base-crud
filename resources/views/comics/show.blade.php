@@ -26,9 +26,14 @@
             <div class="text">
                 {{ $comic->description }}
             </div>
-            <div>
-                <a href="{{ route('comics.edit', $comic->id) }}" class="btn btn-success my-3">Modifica</a>
-                <a href="{{ route('comics.index') }}" class="btn btn-warning">Indietro</a>
+            <div class="d-flex justify-content-end my-3">
+                <a href="{{ route('comics.edit', $comic->id) }}" class="btn btn-success me-3">Modifica</a>
+                <a href="{{ route('comics.index') }}" class="btn btn-warning me-3">Indietro</a>
+                <form action="{{ route('comics.destroy', $comic->id) }}" method="POST">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="btn btn-danger">Cancella</button>
+                </form>
             </div>
         </div>
         <div class="col adv">

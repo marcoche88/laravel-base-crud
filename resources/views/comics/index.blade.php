@@ -10,7 +10,14 @@
         <div class="series">
             @foreach ($comics as $comic)
             <div class="card-comics">
-                <a href="{{ route('comics.edit', $comic->id) }}" class="btn btn-success my-3">Modifica</a>
+                <div class="d-flex justify-content-center my-3">
+                    <a href="{{ route('comics.edit', $comic->id) }}" class="btn btn-success me-2">Modifica</a>
+                    <form action="{{ route('comics.destroy', $comic->id) }}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-danger">Cancella</button>
+                    </form>
+                </div>
                 <a href="{{ route("comics.show", $comic->id) }}"><img src="{{ $comic->thumb }}" alt="{{ $comic->title }}" /></a>
                 <figcaption>{{ $comic->title }}</figcaption>
             </div>
