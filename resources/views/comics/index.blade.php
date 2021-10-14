@@ -7,6 +7,13 @@
 <section id="contents">
     <section class="series-contents my-container">
         <div class="title">current series</div>
+        @if (session('delete'))
+            <div class="pt-5">
+                <div class="alert alert-danger" role="alert">
+                    Eliminato con successo il fumetto {{ session('delete') }}
+                </div>
+            </div>
+        @endif
         <div class="series">
             @foreach ($comics as $comic)
             <div class="card-comics">
