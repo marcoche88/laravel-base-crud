@@ -44,6 +44,17 @@ class ComicController extends Controller
             'series' => 'required|max:100',
             'sale_date' => 'required|date',
             'type' => 'required|max:100',
+        ], [
+            'title.required' => 'Il titolo del fumetto è obbligatorio',
+            'description.required' => 'La descrizione è obbligatoria',
+            'price.required' => 'Il prezzo è obbligatorio',
+            'series.required' => 'La serie è obbligatoria',
+            'sale_date.required' => 'La data di uscita è obbligatoria',
+            'type.required' => 'Il tipo di fumetto è obbligatorio',
+            'unique' => ":attribute già esistente",
+            'max' => ":attribute troppo lungo. Inserire meno caratteri",
+            'numeric' => ":attribute non è un numero. Inserire un valore valido",
+            'date' => ":attribute non è una data valida"
         ]);
 
         $data = $request->all();
@@ -93,6 +104,17 @@ class ComicController extends Controller
             'series' => 'required|max:100',
             'sale_date' => 'required|date',
             'type' => 'required|max:100',
+        ], [
+            'title.required' => 'Il titolo del fumetto è obbligatorio',
+            'description.required' => 'La descrizione è obbligatoria',
+            'price.required' => 'Il prezzo è obbligatorio',
+            'series.required' => 'La serie è obbligatoria',
+            'sale_date.required' => 'La data di uscita è obbligatoria',
+            'type.required' => 'Il tipo di fumetto è obbligatorio',
+            'unique' => ":attribute già esistente",
+            'max' => ":attribute troppo lungo. Inserire meno caratteri",
+            'numeric' => ":attribute non è un numero. Inserire un valore valido",
+            'date' => ":attribute non è una data valida"
         ]);
 
         $data = $request->all();
