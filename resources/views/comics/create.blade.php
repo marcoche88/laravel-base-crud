@@ -4,8 +4,19 @@
 
 @section('content')
 <div class="my-container">
-
     <h1>Aggiungi nuovo fumetto</h1>
+
+    {{-- messaggio di errore dopo validazione dati del form --}}
+    @if ($errors->any())
+        <div class="alert alert-danger my-4">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
     <form method="POST" action="{{ route('comics.store') }}">
         @csrf
         <div class="row">
