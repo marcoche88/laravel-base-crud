@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Comic;
+use Illuminate\Validation\Rule;
 use Illuminate\Http\Request;
 
 class ComicController extends Controller
@@ -52,7 +53,7 @@ class ComicController extends Controller
             'sale_date.required' => 'La data di uscita è obbligatoria',
             'type.required' => 'Il tipo di fumetto è obbligatorio',
             'unique' => ":attribute già esistente",
-            'max' => ":attribute troppo lungo. Inserire meno caratteri",
+            'max' => "Il massimo dei caratteri per :attribute è :max",
             'numeric' => ":attribute non è un numero. Inserire un valore valido",
             'date' => ":attribute non è una data valida"
         ]);
@@ -98,7 +99,8 @@ class ComicController extends Controller
     {
         // validazione
         $request->validate([
-            'title' => 'required|unique:comics|max:100',
+            // per l'aggiornamento dei dati i valori unique devono escludere il 'dettaglio' selezionato altrimenti darà sempre errore, si usa la classe Rule importata sopra  
+            'title' => ['required', Rule::unique('comics')->ignore($comic->id), 'max:100'],
             'description' => 'required',
             'price' => 'required|numeric',
             'series' => 'required|max:100',
@@ -112,7 +114,7 @@ class ComicController extends Controller
             'sale_date.required' => 'La data di uscita è obbligatoria',
             'type.required' => 'Il tipo di fumetto è obbligatorio',
             'unique' => ":attribute già esistente",
-            'max' => ":attribute troppo lungo. Inserire meno caratteri",
+            'max' => "Il massimo dei caratteri per :attribute è :max",
             'numeric' => ":attribute non è un numero. Inserire un valore valido",
             'date' => ":attribute non è una data valida"
         ]);
