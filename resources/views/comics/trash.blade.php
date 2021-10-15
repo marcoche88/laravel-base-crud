@@ -19,6 +19,7 @@
                 </div>
                 <img src="{{ $comic->thumb }}" alt="{{ $comic->title }}" />
                 <figcaption>{{ $comic->title }}</figcaption>
+                <div>Cancellato il {{ $comic->getDeletedAt() }}</div>
             </div>
             @endforeach
         </div>

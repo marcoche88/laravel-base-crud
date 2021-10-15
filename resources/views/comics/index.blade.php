@@ -27,6 +27,8 @@
                 </div>
                 <a href="{{ route("comics.show", $comic->id) }}"><img src="{{ $comic->thumb }}" alt="{{ $comic->title }}" /></a>
                 <figcaption>{{ $comic->title }}</figcaption>
+                <div>Creato il {{ $comic->getCreatedAt() }}</div>
+                <div>Modificato il {{ $comic->getUpdatedAt() }}</div>
             </div>
             @endforeach
         </div>
